@@ -65,6 +65,25 @@ section {
     margin-bottom: 5rem;
     text-align: center;
 }
+/*Projects*/
+.workspace {
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.work {
+    display: flex;
+    justify-content:space-evenly;
+    border: #55d6aa;
+    border-radius: 2%;
+}
+
+.descri {
+    display: flex;
+    align-items: center;
+    color:#ccc;  
+    font-size: xx-large;
+}
 /*Footer Bar */
 .wrapper .button {
     display: inline-block;
