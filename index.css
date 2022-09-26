@@ -81,9 +81,51 @@ section {
 .descri {
     display: flex;
     align-items: center;
-    color:#ccc;  
+    justify-content: center;
     font-size: xx-large;
+    text-decoration: none;
+    text-align: center;
+
 }
+
+
+.descri a {
+    background-image: linear-gradient(
+        to right,
+        #54b3d6,
+        #5e6262 50%,
+        #55d6aa 50%
+      );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    background-position: -100%;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 1rem;
+    
+}
+.descri a:before {
+    content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+}
+
+.descri a:hover {
+    background-position: 0;
+}
+
+.descri a:hover::before {
+    width: 100%;
+}
+
+
 /*Footer Bar */
 .wrapper .button {
     display: inline-block;
