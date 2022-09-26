@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width">
+
+
+
+    <title>Rock, Paper, Scissors</title>
+
+
+
+    <style>
+
+       *{margin:0;padding:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+       ::selection{background:#fb9fe5;text-shadow:none}a{color:#0088CC;text-decoration:none;outline:0}
+       a:hover{color:#005580}a img{border:none}img{max-width:100%}html{font-size:100%}
+       body{padding:5%;font:300 1.25em/1.6 monospace;background:#fff;color:#000;}
+       h1{font-family:"Helvetica Neue",sans-serif;line-height:1;font-weight:300;margin-bottom:1em;}
+       .game{padding:2em;background:#eee;}
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+<h1>Dwayne Johnson, Recycled Tree Bark, or Two Knives converged onto a Handle</h1>
+
+
+
+<div class="game">
+
+
+
+    <script>
+
+        // Player choice
+
+        var loserChoice = prompt("Do you choose rock, paper or scissors?");
+
+
+
+        if (! loserChoice) {
+
+            // Player choice was undefined
+
+            document.write("<p>Hey loser! That's not allowed! Refresh this screen and fight like a man.</p>");
+
+        } else {
+
+            // Display Player choice
+
+            document.write("<p>The person reading the screen:" + " " + loserChoice + "</p>");
+
+        }
+
+        // Computer choice
+
+        var computerChoice = Math.random();
+
+        if (computerChoice < 0.34) {
+
+            computerChoice = "rock";
+
+        } else if(computerChoice <= 0.67) {
+
+            computerChoice = "paper";
+
+        } else {
+
+            computerChoice = "scissors";
+
+        }
+
+        // Display AI choice
+
+        document.write("<p>Superior AI:" + " " + computerChoice + "</p>");
+
+        // Compare user choice vs computer choice
+
+        var compare = function(choice1,choice2) {
+
+            if (choice1 === choice2) {
+
+                return "Ties are for losers, let's go again!";
+
+            }
+
+            if (choice1 === "rock") {
+
+                if (choice2 === "scissors") {
+
+                    // rock wins
+
+                    return "I computed that wrong, so I guess you win...";
+
+                } else {
+
+                    // paper wins
+
+                    return "You lose. An Expected Outcome :)";
+
+                }
+
+            }
+
+            if (choice1 === "paper") {
+
+                if (choice2 === "rock") {
+
+                    // paper wins
+
+                    return "How did you do that? You won...";
+
+                } else {
+
+                    // scissors wins
+
+                    return "Ha! How pathetic.";
+
+                }
+
+            }
+
+            if (choice1 === "scissors") {
+
+                if (choice2 === "rock") {
+
+                    // rock wins
+
+                    return "You lose again! 399,939 for me. 0 for you";
+
+                } else {
+
+                    // scissors wins
+
+                    return "Wow, can't believe I lost to someone who has to use eyes to read...";
+
+                }
+
+            }
+
+        };
+
+        // Run the compare function
+
+        var results = compare(loserChoice,computerChoice);
+
+        // Display results
+
+        document.write("<br><hr><br>" + results);
+
+    </script>
+
+</div>
+
+
+</body>
+
+</html>
